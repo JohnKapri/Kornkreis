@@ -24,7 +24,7 @@ public class Game {
 	}
 
 	public void newGame() {
-		level = Level.loadLevel(this, "/home/matthias/Dokumente/hallmark_maze.gif");
+		level = Level.loadLevel(this, "hallmark_maze.png");
 		
 		player = new Player();
 		player.level = level;

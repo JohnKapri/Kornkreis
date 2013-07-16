@@ -21,7 +21,6 @@ public class TitleMenu extends Menu {
 			}
 			target.draw(msg, 40, 60 + i * 10, Art.getCol(col));
 		}
-		target.draw("Copyright (C) 2011 Mojang", 1+4, 120 - 9, Art.getCol(0x303030));
 	}
 
 	public void tick(Game game, boolean up, boolean down, boolean left, boolean right, boolean use) {

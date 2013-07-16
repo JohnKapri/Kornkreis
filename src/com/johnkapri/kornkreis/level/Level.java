@@ -1,7 +1,6 @@
 package com.johnkapri.kornkreis.level;
 
 import java.awt.image.BufferedImage;
-import java.io.FileInputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -50,8 +49,8 @@ public class Level {
 	public int width, height;
 	private Block solidWall = new SolidBlock();
 
-	public int xSpawn;
-	public int ySpawn;
+	public int xSpawn = 111;
+	public int ySpawn = 23;
 
 	protected int wallCol = 0xB3CEE2;
 	//protected int wallCol = 0xA25555;
@@ -195,7 +194,7 @@ public class Level {
 	public static Level loadLevel(Game game, String name) {
 
 		try {
-			BufferedImage img = ImageIO.read(new FileInputStream(name));
+			BufferedImage img = ImageIO.read(Level.class.getResourceAsStream("/level/" + name));
 
 			int w = img.getWidth();
 			int h = img.getHeight();
